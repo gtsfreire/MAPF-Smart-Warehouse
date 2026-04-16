@@ -1,5 +1,5 @@
 from pathlib import Path
-from grid import Cell, Grid
+from environment.grid import Cell, Grid
 
 def load_map(path: Path) -> Grid:
     lines = path.read_text().splitlines()
