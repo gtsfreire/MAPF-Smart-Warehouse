@@ -2,6 +2,7 @@ import pygame
 from pathlib import Path
 from environment.engine import Engine
 from environment.grid import Cell
+from environment.obstacles import ObstacleManager
 from agents.robot import Robot
 from collections import defaultdict
 
@@ -53,6 +54,9 @@ font = pygame.font.SysFont("Arial", 18)
 total_collisions = 0
 previous_collisions = set()
 
+obstacle_manager = ObstacleManager(grid)
+obstacle_manager.spawn_random_dynamic(count=5)
+
 running = True
 
 while running:
@@ -70,7 +74,7 @@ while running:
     if currentTime - last_move_time > MOVE_DELAY:
         for r in robots:
             r.move_one_step()
-
+        obstacle_manager.tick()
         last_move_time = currentTime
 # Limpar ecrã
     screen.fill(FREE_COLOUR)
@@ -88,6 +92,13 @@ while running:
                 pygame.draw.rect(screen, FREE_COLOUR, rect)
 
             pygame.draw.rect(screen, GRID_COLOUR, rect, 1)
+
+    for (x, y), obs in obstacle_manager.dynamic_obstacles.items():
+        rect = pygame.Rect(x * CELL_SIZE,
+                           y * CELL_SIZE,
+                           CELL_SIZE,
+                           CELL_SIZE)
+        pygame.draw.rect(screen, OBSTACLE_COLOR, rect)
 # Detetar colisões
     positions = defaultdict(list)
     for r in robots:
