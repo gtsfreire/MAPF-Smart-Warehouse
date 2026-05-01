@@ -1,5 +1,5 @@
-from grid import Grid
-from loader import load_map
+from environment.grid import Grid
+from environment.loader import load_map
 class Engine:
     def __init__(self, map_path: str):
         self.grid = load_map(map_path)
