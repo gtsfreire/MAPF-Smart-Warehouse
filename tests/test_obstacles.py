@@ -1,6 +1,6 @@
 from environment.grid import Grid, Cell
 from environment.obstacles import ObstacleManager
-
+#gtsfreire
 def first_free(g: Grid) -> tuple[int,int]:
     for y, row in enumerate(g.cells):
         for x, c in enumerate(row):

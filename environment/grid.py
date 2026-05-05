@@ -1,6 +1,6 @@
 from enum import IntEnum
 from pathlib import Path
-
+#gtsfreire
 class Cell(IntEnum):
     FREE = 0
     OBSTACLE = 1

@@ -1,6 +1,6 @@
 from pathlib import Path
 from environment.grid import Cell, Grid
-
+#gtsfreire
 def load_map(path: Path) -> Grid:
     lines = path.read_text().splitlines()
     height = int(lines[1].split()[1])

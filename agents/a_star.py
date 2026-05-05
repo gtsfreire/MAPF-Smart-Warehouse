@@ -1,5 +1,5 @@
 import heapq
-
+#Mitterzz
 def heuristic(state, goal): # Calcula a distância de Manhattan entre o estado atual e o objetivo.
     (x, y), _ = state
     return abs(x - goal[0]) + abs(y - goal[1])

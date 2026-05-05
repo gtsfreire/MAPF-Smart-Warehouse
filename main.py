@@ -1,6 +1,6 @@
 from pathlib import Path
 from environment.loader import load_map
-
+#gtsfreire
 grid = load_map(Path("scenarios/warehouse-10-20-10-2-1.map"))
 print(f"Dimensões: {grid.width}x{grid.height}")
 
