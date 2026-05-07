@@ -5,7 +5,7 @@ Convenção de coordenadas:
   - (x, y) == (coluna, linha)
   - cells[y][x]
 """
-
+#gtsfreire
 from __future__ import annotations
 
 from enum import IntEnum
