@@ -6,7 +6,7 @@ Controlos:
   SPACE               -> pausar / retomar
   R                   -> reset (novo cenário aleatório)
 """
-
+#sebasgim975
 from __future__ import annotations
 
 import random
