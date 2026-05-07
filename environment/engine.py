@@ -12,7 +12,7 @@ Responsabilidades:
           - swap collisions  (A->B enquanto B->A)
         com prioridade determinística por robot_id (id menor ganha).
 """
-
+#gtsfreire
 from __future__ import annotations
 
 from collections import defaultdict
